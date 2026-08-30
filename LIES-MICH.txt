@@ -1,0 +1,13 @@
+Diese drei Dateien auf GitHub hochladen:
+
+  fetch_data.py   holt die Daten          (fehlt bisher komplett)
+  config.json     die Watchlist           (fehlt bisher komplett)
+  index.html      die Oberflaeche         (ersetzt die aeltere Fassung)
+
+So geht es:
+  Im Repository oben auf  "Add file"  ->  "Upload files"
+  Dann "choose your files" anklicken und in diesem Ordner alle drei markieren.
+  Unten "Commit changes".
+
+Nicht ziehen, sondern ueber "choose your files" auswaehlen -
+beim Ziehen gehen Ordner verloren, genau das ist beim ersten Mal passiert.

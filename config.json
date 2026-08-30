@@ -1,0 +1,27 @@
+{
+  "sec_user_agent": "Franz Juely Aktien-Tool franz.juely04@gmail.com",
+  "watchlist": [
+    {"ticker": "AAPL",  "stooq": "aapl.us", "name": "Apple",              "market": "US"},
+    {"ticker": "MSFT",  "stooq": "msft.us", "name": "Microsoft",          "market": "US"},
+    {"ticker": "NVDA",  "stooq": "nvda.us", "name": "NVIDIA",             "market": "US"},
+    {"ticker": "GOOGL", "stooq": "googl.us","name": "Alphabet",           "market": "US"},
+    {"ticker": "AMZN",  "stooq": "amzn.us", "name": "Amazon",             "market": "US"},
+    {"ticker": "META",  "stooq": "meta.us", "name": "Meta Platforms",     "market": "US"},
+    {"ticker": "BRK.B", "stooq": "brk-b.us","name": "Berkshire Hathaway", "market": "US"},
+    {"ticker": "V",     "stooq": "v.us",    "name": "Visa",               "market": "US"},
+    {"ticker": "UNH",   "stooq": "unh.us",  "name": "UnitedHealth",       "market": "US"},
+    {"ticker": "COST",  "stooq": "cost.us", "name": "Costco",             "market": "US"},
+    {"ticker": "SAP",   "stooq": "sap.de",  "name": "SAP",                "market": "DE"},
+    {"ticker": "SIE",   "stooq": "sie.de",  "name": "Siemens",            "market": "DE"},
+    {"ticker": "ALV",   "stooq": "alv.de",  "name": "Allianz",            "market": "DE"},
+    {"ticker": "RHM",   "stooq": "rhm.de",  "name": "Rheinmetall",        "market": "DE"},
+    {"ticker": "ASML",  "stooq": "asml.nl", "name": "ASML",               "market": "NL"}
+  ],
+  "benchmarks": [
+    {"ticker": "^SPX",  "stooq": "^spx",  "name": "S&P 500"},
+    {"ticker": "^NDQ",  "stooq": "^ndq",  "name": "Nasdaq 100"},
+    {"ticker": "^DAX",  "stooq": "^dax",  "name": "DAX"},
+    {"ticker": "GOLD",  "stooq": "xauusd","name": "Gold (USD)"},
+    {"ticker": "BTC",   "stooq": "btcusd","name": "Bitcoin (USD)"}
+  ]
+}

@@ -171,7 +171,14 @@ svg{display:block;width:100%;height:auto;overflow:visible}
 <script>
 "use strict";
 const $ = s => document.querySelector(s);
-const DATA = "../data/";
+let DATA = "data/";                       // neben der Seite (GitHub-Ablage)
+async function holen(name){                // sonst eine Ebene hoeher (lokale Ablage)
+  for(const basis of ["data/","../data/"]){
+    try{ const r = await fetch(basis+name,{cache:"no-store"});
+         if(r.ok){ DATA = basis; return await r.json(); } }catch(e){}
+  }
+  throw new Error("Datei " + name + " nicht gefunden");
+}
 
 /* ---------- Formatierung ---------- */
 const nf = (n,d=2)=> n==null||Number.isNaN(n) ? "&ndash;"
@@ -231,9 +238,7 @@ async function start(){
   try{
     if(window.EINGEBETTET){ u = window.EINGEBETTET.universe; }
     else {
-      const res = await fetch(DATA+"universe.json", {cache:"no-store"});
-      if(!res.ok) throw new Error("HTTP "+res.status);
-      u = await res.json();
+      u = await holen("universe.json");
     }
   }catch(e){
     $("#fehlerbox").classList.remove("hide");
@@ -417,9 +422,7 @@ async function ladeDetail(ticker){
       aktuell = window.EINGEBETTET.details[ticker];
       if(!aktuell) throw new Error("nicht in dieser Datei enthalten");
     } else {
-      const res = await fetch(DATA+ticker.replace(/\./g,"-")+".json",{cache:"no-store"});
-      if(!res.ok) throw new Error("HTTP "+res.status);
-      aktuell = await res.json();
+      aktuell = await holen(ticker.replace(/\./g,"-")+".json");
     }
   }catch(e){
     alert("Detaildaten fuer "+ticker+" fehlen ("+e.message+"). Bitte den Datensammler laufen lassen.");
