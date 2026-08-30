@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - name: Daten holen
-        run: python3 collector/fetch_data.py
+        run: python3 ./fetch_data.py
       - name: Ergebnis einchecken
         run: |
           git config user.name  "Aktien-Tool Bot"
